@@ -3,20 +3,33 @@
 }
 
 body {
-    margin-top: 10%;
+    margin-top: 8%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     background-image: url("https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg");
 }
 
-button {
+.button {
     font-size: 20rem;
     border-radius: 25%;
     box-shadow: 5px 2px;
 }
 
-h3 {
+#button {
+    filter: hue-rotate(300deg);
+}
+
+#button2 {
+    filter: hue-rotate(3.142rad);
+}
+
+p {
     font-size: 10rem;
     color: #ffdd00;
     margin: 1rem 1rem;
 }
+
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+}};
