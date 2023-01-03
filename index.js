@@ -2,6 +2,7 @@ let dragon = document.getElementById('button');
 let numberOfClicks = 0;
 
 let dragon2 = document.getElementById('button2');
+let numberOfClicks2 = 0;
 
 
 // mutating a global variable in the listener callback //
@@ -12,7 +13,7 @@ dragon.addEventListener('click', function() {
 });
 
 dragon2.addEventListener('click', function() {
-    numberOfClicks += 1,
+    numberOfClicks2 += 1,
     document.getElementById('counter2').innerHTML = numberOfClicks
 });
 
