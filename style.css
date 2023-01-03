@@ -17,6 +17,7 @@ body {
 
 #button {
     filter: hue-rotate(300deg);
+    transform: scaleX(-1);
 }
 
 #button2 {
