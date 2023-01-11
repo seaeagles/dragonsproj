@@ -15,12 +15,12 @@ body {
     box-shadow: 5px 2px;
 }
 
-#button {
+.fire {
     filter: hue-rotate(300deg);
     transform: scaleX(-1);
 }
 
-#button2 {
+.ice {
     filter: hue-rotate(3.142rad);
 }
 

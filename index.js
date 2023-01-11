@@ -1,7 +1,7 @@
-let dragon = document.getElementById('button');
+const dragon = document.querySelector('.fire');
 let numberOfClicks = 0;
 
-let dragon2 = document.getElementById('button2');
+const dragon2 = document.querySelector('.ice');
 let numberOfClicks2 = 0;
 
 
@@ -14,7 +14,7 @@ dragon.addEventListener('click', function() {
 
 dragon2.addEventListener('click', function() {
     numberOfClicks2 += 1,
-    document.getElementById('counter2').innerHTML = numberOfClicks
+    document.getElementById('counter2').innerHTML = numberOfClicks2
 });
 
 // dragon.addEventListener('click', function() {
