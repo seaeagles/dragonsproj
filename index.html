@@ -5,26 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dragon Clicker</title>
+    <!-- <script defer src="index.js"></script> -->
+    <script defer src="model.js"></script>
+    <script defer src="controller.js"></script>
+    <script defer src="view.js"></script>
     <link rel="stylesheet" href="style.css">
-    <script defer src="index.js"></script>
+
 </head>
 <body>
     <header>
-<span class="navbar">
-    <nav>
-        <button class="fire" onclick="dragonTemplate('fire')">fire</button>
-        <button class="ice" onclick="dragonTemplate()">ice</button>
-        <button class="gold" onclick="dragonTemplate()">gold</button>
-        <button class="ghost" onclick="dragonTemplate()">ghost</button>
-        <button class="chaos" onclick="dragonTemplate()">chaos</button>
+<!-- <span class="navbar"> -->
+    <nav class="dragon-list">
+        <!-- <button class="fire" onclick="controller.spawnDragon('fire')">fire</button>
+        <button class="ice" onclick="controller.spawnDragon('ice')">ice</button>
+        <button class="gold" onclick="controller.spawnDragon('gold')">gold</button>
+        <button class="ghost" onclick="controller.spawnDragon('ghost')">ghost</button>
+        <button class="chaos" onclick="controller.spawnDragon('chaos')">chaos</button> -->
     </nav>
-</span>
+<!-- </span> -->
     </header>
 <main class="dragon-pen">
-    <span class="directive">Where are all the space dragons? Click the buttons to wake up some dragons!</span>
-    <div class="dragon-block">
+        <!-- <div class="dragon-block">
        <button>🐉</button>
-    </div>
+    </div> -->
 </main>
 </body>
 </html>

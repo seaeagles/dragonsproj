@@ -13,55 +13,81 @@
 //         'ice',
 //         'gold',
 //         'ghost',
-//         'black'
+//         'chaos'
 //     ],
 // }
 
-   let dragons = 
-    [
-        {id: 0, type: 'fire', clicks: 0, img: '🐉'},
-        {id: 1, type: 'ice', clicks: 0, img: '🐉'},
-        {id: 2, type: 'gold', clicks: 0, img: '🐉'},
-        {id: 3, type: 'ghost', clicks: 0, img: '🐉'},
-        {id: 4, type: 'black', clicks: 0, img: '🐉'}
-    ]
+//    dragonTypes = 
+//     [
+//         {id: 0, type: 'fire', clicks: 0, img: '🐉'},
+//         {id: 1, type: 'ice', clicks: 0, img: '🐉'},
+//         {id: 2, type: 'gold', clicks: 0, img: '🐉'},
+//         {id: 3, type: 'ghost', clicks: 0, img: '🐉'},
+//         {id: 4, type: 'chaos', clicks: 0, img: '🐉'}
+//     ]
 
-function dragonFactory(type) {
-    return {
-// we want an id, icon, type, color (class that points to color), number of clicks
-     type: `${type}`,
-     clicks: 0,
-     cssClass: '.${type}',
-     icon: '🐉',
-    //  addClick: function(numberOfClicks) {
-    //         this.clicks += numberOfClicks;
-    //         document.querySelector(this.output).innerText = this.clicks;
-    //     },
-        // view: function() {
-        //     document.querySelector('.dragon-block').innerHTML = "";
-        //     document.querySelector('.dragon-block').innerHTML += 
-        //     `
-        // }
-    }
+const nav = document.querySelector('.navbar')
+const display = document.querySelector('.dragon-pen')
+
+// const dragonTypes = ['fire', 'ice', 'gold', 'ghost', 'chaos']
+// nav.innerHTML = dragonTypes.map(type => {
+//     return `<button onclick="spawnDragon('${type}')">${type}</button>`
+// }).join('')
+
+const dragons = []
+
+function spawnDragon(type) {
+    const dragon = dragonFactory(type)
+    dragons.push(dragon)
+    display.innerHTML = dragonTemplate(dragons)
 }
 
-let iceDragon = dragonFactory('ice');
-let fireDragon = dragonFactory('fire');
-let goldDragon = dragonFactory('gold');
-let ghostDragon = dragonFactory('ghost');
-let blackDragon = dragonFactory('black');
+function increment(timestamp) {
+    const target = dragons.find(dragon => dragon.timestamp === timestamp)
+    target.clicks += 1
+    rerender()
+}
 
-function dragonTemplate(type)  { 
-    for(species in dragons){
-    return (
-    `<div class="dragon-block">
-    <h2>${type} dragon</h2>
-    <button type="button" id="${type}" class="dragon ${type}">🐉</button>
-    <p><output>${this.clicks}</output></p>
-    </div>
-    `
-    )
-}};
+function rerender() {
+    display.innerHTML = dragonTemplate(dragons)
+}
+
+// function dragonFactory(type) {
+//     return {
+// // we want an id, icon, type, color (class that points to color), number of clicks
+//      type: `${type}`,
+//      clicks: 0,
+//      cssClass: '.${type}',
+//      icon: '🐉',
+//     //  addClick: function(numberOfClicks) {
+//     //         this.clicks += numberOfClicks;
+//     //         document.querySelector(this.output).innerText = this.clicks;
+//     //     },
+//         // view: function() {
+//         //     document.querySelector('.dragon-block').innerHTML = "";
+//         //     document.querySelector('.dragon-block').innerHTML += 
+//         //     `
+//         // }
+//     }
+// }
+
+// let iceDragon = dragonFactory('ice');
+// let fireDragon = dragonFactory('fire');
+// let goldDragon = dragonFactory('gold');
+// let ghostDragon = dragonFactory('ghost');
+// let blackDragon = dragonFactory('black');
+
+// function dragonTemplate(dragontypes)  { 
+//     return dragons.map(dragon => {
+//     return (
+//     `<div class="dragon-block">
+//     <h2>${dragon.type} dragon</h2>
+//     <button type="button" id="${type}" class="dragon ${type}" onclick="increment(${dragon.timestamp})">🐉</button>
+//     <p><output>${this.clicks}</output></p>
+//     </div>
+//     `
+//     )
+// })};
 
 // function templateData (data) {
 //     console.log('new data', data)

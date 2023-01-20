@@ -5,9 +5,12 @@
 }
 
 body {
-    /* display: flex;
-    justify-content: space-between; */
     background-image: url("https://2.bp.blogspot.com/-C1lzrGQdHkM/T78dxRvrmBI/AAAAAAAAEHw/dYWj8zg6TIg/s1600/Hdhut.blogspot.com+%252835%2529.jpg");
+}
+main {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     color: #ffdd00; 
 }
